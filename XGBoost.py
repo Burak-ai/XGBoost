@@ -25,7 +25,6 @@ my_model.fit(X_train, y_train,
                           early_stopping_rounds=5, 
              eval_set=[(X_valid, y_valid)],
              verbose=False)
-# set aside some data for calculating the validation scores 
-# this is done by setting the eval_set
+
 
 
