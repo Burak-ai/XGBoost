@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-data = pd.read_csv('../input/melbourne-housing-snapshot/melb_data.csv')
+data = pd.read_csv('melbourne-housing-snapshot/melb_data.csv')
 
 cols_to_use = ['Rooms', 'Distance', 'Landsize', 'BuildingArea', 'YearBuilt']
 X = data[cols_to_use]
