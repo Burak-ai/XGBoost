@@ -2,9 +2,6 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_absolute_error
-import pandas as pd
-from sklearn.model_selection import train_test_split
-
 
 data = pd.read_csv('melb_data.csv')
 
