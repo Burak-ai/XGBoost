@@ -19,3 +19,13 @@ my_model.fit(X_train, y_train)
 predictions = my_model.predict(X_valid)
 print("Mean Absolute Error: " + str(mean_absolute_error(predictions, y_valid)))
 
+
+my_model = XGBRegressor(n_estimators=500)
+my_model.fit(X_train, y_train,
+                          early_stopping_rounds=5, 
+             eval_set=[(X_valid, y_valid)],
+             verbose=False)
+# set aside some data for calculating the validation scores 
+# this is done by setting the eval_set
+
+
