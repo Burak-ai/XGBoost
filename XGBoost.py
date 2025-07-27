@@ -65,9 +65,18 @@ X_train, X_test = X_train.align(X_test, join='left', axis=1)
 
 
 
+# First model
 my_model_1 = XGBRegressor(random_state=0)
 my_model_1.fit(X_train, y_train)
 predictions_1 = my_model_1.predict(X_valid)
+mae_1 = mean_absolute_error(predictions_1, y_valid)
+print("Mean Absolute Error:" , mae_1)
 
+# Improved model
+my_model_2 = XGBRegressor(n_estimators=500, learning_rate=0.05)
+my_model_2.fit(X_train, y_train)
+predictions_2 = my_model_2.predict(X_valid)
+mae_2 = mean_absolute_error(predictions_2, y_valid)
+print("Mean Absolute Error:" , mae_2)
 
 
