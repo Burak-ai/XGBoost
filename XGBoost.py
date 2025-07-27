@@ -14,3 +14,7 @@ X_train, X_valid, y_train, y_valid = train_test_split(X, y)
 
 my_model = XGBRegressor()
 my_model.fit(X_train, y_train)
+
+predictions = my_model.predict(X_valid)
+print("Mean Absolute Error: " + str(mean_absolute_error(predictions, y_valid)))
+
