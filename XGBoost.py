@@ -19,8 +19,7 @@ my_model.fit(X_train, y_train)
 predictions = my_model.predict(X_valid)
 print("Mean Absolute Error: " + str(mean_absolute_error(predictions, y_valid)))
 
-
-my_model = XGBRegressor(n_estimators=500)
+my_model = XGBRegressor(n_estimators=500, learning_rate=0.05, n_jobs=4)
 my_model.fit(X_train, y_train,
                           early_stopping_rounds=5, 
              eval_set=[(X_valid, y_valid)],
