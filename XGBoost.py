@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_absolute_error
 
-data = pd.read_csv('melbourne-housing-snapshot/melb_data.csv')
+data = pd.read_csv('melb_data.csv')
 
 cols_to_use = ['Rooms', 'Distance', 'Landsize', 'BuildingArea', 'YearBuilt']
 X = data[cols_to_use]
