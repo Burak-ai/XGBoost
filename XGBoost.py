@@ -24,11 +24,7 @@ my_model.fit(X_train, y_train,
                           early_stopping_rounds=5, 
              eval_set=[(X_valid, y_valid)],
              verbose=False)
-# set aside some data for calculating the validation scores by setting the eval_set
-# use early_stopping_rounds to find the optimal time to stop iterating.
-# n_estimators specifies how many times to go through the modeling cycle described above.
-# we can multiply the predictions from each model by a small number with learning rate.
-# On larger datasets where runtime is a consideration, you can use n_jobs to build your models faster
+
 
 
 X = pd.read_csv('train.csv', index_col='Id')
