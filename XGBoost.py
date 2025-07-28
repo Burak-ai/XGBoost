@@ -27,6 +27,7 @@ my_model.fit(X_train, y_train,
 
 
 
+
 X = pd.read_csv('train.csv', index_col='Id')
 X_test_full = pd.read_csv('test.csv', index_col='Id')
 
@@ -64,6 +65,7 @@ my_model_1.fit(X_train, y_train)
 predictions_1 = my_model_1.predict(X_valid)
 mae_1 = mean_absolute_error(predictions_1, y_valid)
 print("Mean Absolute Error:" , mae_1)
+
 
 # Second model
 my_model_2 = XGBRegressor(n_estimators=500, learning_rate=0.05)
