@@ -50,7 +50,7 @@ X_train = X_train_full[my_cols].copy()
 X_valid = X_valid_full[my_cols].copy()
 X_test = X_test_full[my_cols].copy()
 
-# One-hot encode the data (to shorten the code, we use pandas)
+# One-hot encode the data 
 X_train = pd.get_dummies(X_train)
 X_valid = pd.get_dummies(X_valid)
 X_test = pd.get_dummies(X_test)
@@ -96,4 +96,5 @@ predictions_3 = my_model_3.predict(X_valid)
 mae_3 = mean_absolute_error(y_valid, predictions_3)
 
 print("Mean Absolute Error:", mae_3)
+
 
